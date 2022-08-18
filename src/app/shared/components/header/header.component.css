@@ -1,11 +1,17 @@
-.navbar{
-    margin: auto;
-    border: border-box;
-}
 
-.nav-link{
-    color: whitesmoke;
-}
-.navbar-brand{
-    color: whitesmoke;
-}
+
+    .searchInput {
+        margin-left: 138px;
+        height: 31px;
+        width: 47%;
+    }
+    
+    .listItem{
+        margin-left: 20px;
+    }
+
+    .loginBtn{
+        padding: 5px 15px;
+        margin-top: 7px;
+        font-size: 13px;
+    }
