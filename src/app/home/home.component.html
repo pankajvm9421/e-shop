@@ -1,0 +1,125 @@
+<section class="shadow p-4 mb-2 bg-body rounded">
+  <div class="container d-flex justify-content-center align-item-center">
+    <div class="mx-3">
+
+      <a (click)="filterProduct('all')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Top Offers</a>
+      </a>
+     
+    </div>
+    <div class="mx-3">
+      <a (click)="filterProduct('Grocery')">
+
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="Top Offers" width="65" height="65">
+      <a  href="#" class="d-block text-decoration-none">Grocery</a>
+
+      </a>
+      
+    </div>
+    <div class="mx-3">
+      <a (click)="filterProduct('Mobiles')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Mobiles</a>
+      </a>
+
+    </div>
+
+    <div class="mx-3">
+
+      <a (click)="filterProduct('Fashion')">
+
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Fashion</a>
+      </a>
+
+    </div>
+    <div class="mx-3">
+
+      <a (click)="filterProduct('Electronics')">
+        <img src="	https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Electronics</a>
+      </a>
+
+    </div>
+    <div class="mx-3">
+      <a (click)="filterProduct('Home')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Home</a>
+      </a>
+    </div>
+    <div class="mx-3">
+      <a (click)="filterProduct('Appliances')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Appliances</a>
+      </a>
+
+    </div>
+
+    <div class="mx-3">
+      <a (click)="filterProduct('Travel')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Travel</a>
+      </a>
+
+    </div>
+
+    <div class="mx-3">
+      <a (click)="filterProduct('Travel')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="Top Offers" width="65" height="65">
+        <a  href="#" class="d-block text-decoration-none">Beauty,Toys and More</a>
+      </a>
+
+    </div>
+  </div>
+
+  
+</section>
+ <!-- <app-category></app-category> -->
+ <section class="p-4 mb-5 bg-body rounded">
+  <div class="my-container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets\home-banners\header 3.jpg" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets\home-banners\header 2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets\home-banners\header 1.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+</section>
+<!-- <app-offersection></app-offersection> -->
+
+<section class="mt-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-1" *ngFor="let item of filteredProducts"> 
+          <div class="card" style="width: 18rem;">
+            <img src={{item.image}} class="card-img-top" alt="..." style="width: 50%;height:50%">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text" style="white-space:nowrap;overflow:hidden">{{item.description}}</p>
+              <p><strong>Price</strong> : ${{item.price}}</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
