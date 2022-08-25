@@ -75,7 +75,7 @@
 
   
 </section>
- <!-- <app-category></app-category> -->
+ 
  <section class="p-4 mb-5 bg-body rounded">
   <div class="my-container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -101,7 +101,7 @@
       </div>
   </div>
 </section>
-<!-- <app-offersection></app-offersection> -->
+
 
 <section class="mt-2">
   <div class="container">
@@ -113,7 +113,7 @@
               <h5 class="card-title">{{item.title}}</h5>
               <p class="card-text" style="white-space:nowrap;overflow:hidden">{{item.description}}</p>
               <p><strong>Price</strong> : ${{item.price}}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a  class="btn btn-primary" (click)="addToCart(item)">Add to Cart</a>
             </div>
           </div>
       </div>
