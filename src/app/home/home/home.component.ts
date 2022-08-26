@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   }
 
   getProducts(){
-    debugger
+    // debugger
     this.http.getProduct('productsitems').subscribe((el:Product[])=>{
-      console.log("el",el);
+      // console.log("el",el);
 
       if(Array.isArray(el) && el.length > 0){
         this.productsArray = el ;

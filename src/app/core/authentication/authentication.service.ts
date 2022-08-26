@@ -7,18 +7,18 @@ import { HttpService } from '../http/http.service';
 })
 export class AuthenticationService {
 
-  constructor(private httpservice: HttpService) { }
+  constructor() { }
 
-  registerUser(data:any){
-    return this.httpservice.postData('users',data)
-  }
+  // registerUser(data:any){
+  //   return this.httpservice.postData('users',data)
+  // }
 
-  authlogin(data:any){
-    const params = new HttpParams()
-    .set("emailId", data.email)
-    .set("password", data.password)
-    return this.httpservice.getData('users',params)
-  }
+  // authlogin(data:any){
+  //   const params = new HttpParams()
+  //   .set("emailId", data.email)
+  //   .set("password", data.password)
+  //   return this.httpservice.getData('users',params)
+  // }
   getUser(){
     var user:any;
     user = localStorage.getItem('user')
