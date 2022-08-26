@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  actionType: string = 'SignIn';
+  isUserLoggedIn:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+  handleAction(){
+    this.actionType = 'SignUp'
+  }
+  signInHandler(event){
+    if(event){
+      console.log(event)
+    }
+    
+  }
+
+  signUpHandler(event){
+    if(event){
+      this.actionType = 'SignIn'
+    }
   }
 
 }

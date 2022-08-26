@@ -2,7 +2,8 @@
   <div class="container">
     <a class="navbar-brand ml-5 header text-white" href="#">Shopkart</a>
     
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex searchInput">
@@ -11,8 +12,10 @@
     </form>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item listItem">
-          <a class="btn btn-white bg-white nav-link active text-dark loginBtn" aria-current="page" href="#">Login</a>
+        <li class="nav-item listItem" *ngIf="!isUserLoggedIn">
+          <a class="btn btn-white bg-white nav-link active text-dark loginBtn"
+          aria-current="page"  
+          data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
         </li>
 
         <li class="nav-item dropdown listItem">
@@ -33,3 +36,30 @@
     </div>
   </div>
 </nav>
+
+
+<!-- Button trigger moda -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Login
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-sign-in *ngIf="actionType =='SignIn' " (signInCompleted)="signInHandler($event)"></app-sign-in>
+        <app-sign-up *ngIf="actionType == 'SignUp'" [actionName]="'SignUp'" (signUpCompleted)="signUpHandler($event)"></app-sign-up>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary me-auto" *ngIf="actionType == 'SignIn'" (click)="handleAction()">Register</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
