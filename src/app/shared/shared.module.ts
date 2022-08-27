@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BodyComponent } from './components/body/body.component';
 import { LoginModule } from '../login/login.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     LoginModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   exports:[
     HeaderComponent,

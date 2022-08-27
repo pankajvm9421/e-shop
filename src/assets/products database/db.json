@@ -261,14 +261,94 @@
       "id": 1
     },
     {
-      "email": "pankajvm9421@gmail.com",
+      "firstName": "Nakshatra",
+      "lastName": "Sain",
+      "mobileNumber": "08668851480",
+      "dateofBirth": "08/051992",
+      "emailId": "yournextfilter@gmail.com",
       "password": "pankaj1234",
+      "confirmPassword": "pankaj1234",
+      "isFormAccept": true,
+      "address": {
+        "line1": "sahjiwan colony",
+        "line2": "shelhal road",
+        "city": "udgir",
+        "state": "maharashtra",
+        "zipCode": "413517"
+      },
       "id": 2
     },
     {
-      "email": "pankajvm9421@gmail.com",
+      "firstName": "Nakshatra",
+      "lastName": "Sain",
+      "mobileNumber": "08668851480",
+      "dateofBirth": "08/051992",
+      "emailId": "yournextfilter@gmail.com",
       "password": "pankaj1234",
+      "confirmPassword": "pankaj1234",
+      "isFormAccept": true,
+      "address": {
+        "line1": "sahjiwan colony",
+        "line2": "shelhal road",
+        "city": "udgir",
+        "state": "maharashtra",
+        "zipCode": "413517"
+      },
       "id": 3
+    },
+    {
+      "firstName": "Nakshatra",
+      "lastName": "Sain",
+      "mobileNumber": "08668851480",
+      "dateofBirth": "08/051992",
+      "emailId": "yournextfilter@gmail.com",
+      "password": "pankaj1234",
+      "confirmPassword": "pankaj1234",
+      "isFormAccept": true,
+      "address": {
+        "line1": "sahjiwan colony",
+        "line2": "shelhal road",
+        "city": "udgir",
+        "state": "maharashtra",
+        "zipCode": "413517"
+      },
+      "id": 4
+    },
+    {
+      "firstName": "ashwini",
+      "lastName": "jadhav",
+      "mobileNumber": "8830759329",
+      "dateofBirth": "08/051992",
+      "emailId": "jadhavat97@gmail.com",
+      "password": "pankaj1234",
+      "confirmPassword": "pankaj1234",
+      "isFormAccept": true,
+      "address": {
+        "line1": "sahjiwan colony",
+        "line2": "shelhal road",
+        "city": "udgir",
+        "state": "maharashtra",
+        "zipCode": "413517"
+      },
+      "id": 5
+    },
+    {
+      "firstName": "ashwini",
+      "lastName": "jadhav",
+      "mobileNumber": "8830759329",
+      "dateofBirth": "08/051992",
+      "emailId": "jadhavat97@gmail.com",
+      "password": "pankaj1234",
+      "confirmPassword": "pankaj1234",
+      "isFormAccept": true,
+      "address": {
+        "line1": "sahjiwan colony",
+        "line2": "shelhal road",
+        "city": "udgir",
+        "state": "maharashtra",
+        "zipCode": "413517"
+      },
+      "id": 6
     }
   ]
 }
