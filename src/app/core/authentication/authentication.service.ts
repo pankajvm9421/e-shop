@@ -1,6 +1,5 @@
-import { HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpService } from '../http/http.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +24,7 @@ export class AuthenticationService {
     if(user){
       user = JSON.parse(user)
       return user;
+      // console.log(user)
     }
     return null;
   }

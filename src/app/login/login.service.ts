@@ -1,4 +1,4 @@
-import { HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../core/http/http.service';
 
@@ -15,7 +15,7 @@ export class LoginService {
 
     authlogin(data:any){
     const params = new HttpParams()
-    .set("emailId", data.email)
+    .set("emailId", data.emailId)
     .set("password", data.password)
     return this.httpservice.getData('users',params)
   }
