@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from 'src/app/core/authentication/authentication.service';
 import { LoginService } from '../login.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -14,7 +15,7 @@ export class SignInComponent implements OnInit {
   @Output() SignInCompleted: EventEmitter<boolean> = new EventEmitter(false)
 
   constructor(private fb: FormBuilder, private login: LoginService,
-    private authsvc: AuthenticationService, private toaster: ToastrService) { }
+    private authsvc: AuthenticationService, private router: Router,private toaster: ToastrService) { }
 
   ngOnInit(): void {
     this.createSignInForm();
@@ -31,12 +32,13 @@ export class SignInComponent implements OnInit {
     if (this.signInForm.valid) {
       this.login.authlogin(this.signInForm.value).subscribe(el => {
 
-        if (Array.isArray(el)) {
+        if (Array.isArray(el) && el.length > 0) {
           let user = el[0];
-          // user['token'] = "njvfsbohboa";
+          user['token'] = "njvfsbohboa";
           localStorage.setItem("user", JSON.stringify(user));
           this.SignInCompleted.emit(true)
           this.toaster.success("You have logged in Sucessfully")
+          // this.router.navigate(['/products'])
         }
         else {
           this.toaster.error("User not found. Please register to login")
