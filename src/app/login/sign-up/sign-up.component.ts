@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { AuthenticationService } from 'src/app/core/authentication/authentication.service';
 import { passwordmismatch } from 'src/app/shared/validators/custom.validator';
 import { LoginService } from '../login.service';
@@ -14,7 +14,7 @@ export class SignUpComponent implements OnInit {
   FirstName: any;
   user: any;
   @Input() actionName: string = ''
-  @Output() SignUpCompleted: EventEmitter<boolean> =
+  @Output() signUpCompleted: EventEmitter<boolean> =
    new EventEmitter( false );
 
   constructor(private fb: FormBuilder, private login: LoginService, private authsvc: AuthenticationService) { }
@@ -86,7 +86,7 @@ export class SignUpComponent implements OnInit {
     // if (this.signUpForm.valid) {
     this.login.registerUser(this.signUpForm.value).subscribe(el => {
       console.log('response', el);
-      this.SignUpCompleted.emit(true);
+      this.signUpCompleted.emit(true);
     }
     )
     // }

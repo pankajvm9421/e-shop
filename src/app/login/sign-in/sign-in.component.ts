@@ -12,15 +12,15 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   signInForm!: FormGroup;
-  @Output() SignInCompleted: EventEmitter<boolean> = new EventEmitter(false)
+  @Output() signInCompleted: EventEmitter<boolean> = new EventEmitter(false);
 
   constructor(private fb: FormBuilder, private login: LoginService,
     private authsvc: AuthenticationService, private router: Router,private toaster: ToastrService) { }
 
   ngOnInit(): void {
-    this.createSignInForm();
+    this.createLoginForm();
   }
-  createSignInForm() {
+  createLoginForm() {
     this.signInForm = this.fb.group({
       "emailId": ['', [Validators.required]],
       "password": ['', [Validators.required]]
@@ -36,7 +36,7 @@ export class SignInComponent implements OnInit {
           let user = el[0];
           user['token'] = "njvfsbohboa";
           localStorage.setItem("user", JSON.stringify(user));
-          this.SignInCompleted.emit(true)
+          this.signInCompleted.emit(true)
           this.toaster.success("You have logged in Sucessfully")
           // this.router.navigate(['/products'])
         }

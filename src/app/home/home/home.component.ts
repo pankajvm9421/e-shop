@@ -8,7 +8,7 @@ import { Product } from 'src/app/core/modal/product';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  productsArray: Product[] = []
+  productsArray: Product[] = [];
   filteredProducts: Product[] = [];
   constructor(private http: HttpService) { }
 
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   getProducts(){
     // debugger
-    this.http.getProduct('productsitems').subscribe((el:Product[])=>{
+    this.http.getData('productsitems').subscribe((el:Product[])=>{
       // console.log("el",el);
 
       if(Array.isArray(el) && el.length > 0){
