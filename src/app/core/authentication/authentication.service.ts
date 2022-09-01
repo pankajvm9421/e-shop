@@ -20,10 +20,10 @@ export class AuthenticationService {
   // }
   getUser(){
     var user:any;
-    user = localStorage.getItem('user')
+    user = localStorage.getItem('user');
     if(user){
-      user = JSON.parse(user)
-      return user;
+      user = JSON.parse(user);
+      return user ;
       // console.log(user)
     }
     return null;

@@ -7,25 +7,25 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class HttpService {
-  baseUrl:string = environment.baseUrl
+  baseUrl:string = environment.baseUrl;
 
   httpHeaderOptions = {
-    "headers" : new HttpHeaders()
+    "headers":new HttpHeaders()
     .set("Content-type","application/json")
     .set("Allow-All-origin","*")
   }
 
   constructor(private http: HttpClient) { }
 
-  getData(endPoint: string, params: HttpParams = new HttpParams()){
+  getData(endPoint: string, params: HttpParams = new HttpParams()) {
     const url = this.baseUrl + endPoint;
-    return this.http.get<any>(url, { params });
+    return this.http.get<any>(url,{ params });
     
   }
 
   postData(endPoint:string, data: any){
     const url = this.baseUrl + endPoint;
-    return this.http.post<any>(url, data, this.httpHeaderOptions)
+    return this.http.post<any>(url, data,this.httpHeaderOptions);
   }
 
   getProduct(endPoint:string){

@@ -5,10 +5,12 @@ import { SignInComponent } from './login/sign-in/sign-in.component';
 import { SignUpComponent } from './login/sign-up/sign-up.component';
 
 const routes: Routes = [
-  {path: 'product', component: HomeComponent},
+  {path: 'products', component: HomeComponent},
   {path: 'sign-In', component: SignInComponent},
   {path: 'sign-up', component: SignUpComponent},
-  {path: '', redirectTo: "/product", pathMatch:'full'},
+  {path: '', redirectTo: "/products", pathMatch:'full'},
+  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) },
+  { path: 'seller', loadChildren: () => import('./seller/seller.module').then(m => m.SellerModule) },
 ];
 
 @NgModule({
