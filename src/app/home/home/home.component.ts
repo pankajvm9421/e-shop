@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/cart/cart services/cart.service';
 import { HttpService } from 'src/app/core/http/http.service';
 import { Product } from 'src/app/core/modal/product';
 
@@ -10,7 +11,8 @@ import { Product } from 'src/app/core/modal/product';
 export class HomeComponent implements OnInit {
   productsArray: Product[] = [];
   filteredProducts: Product[] = [];
-  constructor(private http: HttpService) { }
+
+  constructor(private http: HttpService, private cartSvc: CartService) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -42,5 +44,11 @@ export class HomeComponent implements OnInit {
     {'type':'clothing','category':'Clothing'},
     {'type':'','category':'Top Offers'},
   ]
+
+  addTocart(product: Product){
+    this.cartSvc.addItemToCart(product);
+
+  }
+
 
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import  { Injectable } from '@angular/core';
 import { BehaviorSubject, take, map } from 'rxjs';
 import { Product } from 'src/app/core/modal/product';
 
@@ -10,7 +10,9 @@ export class CartService {
   selectitems = this.selecteitemSubject.asObservable();
 
 
-  constructor() { }
+  constructor() {
+    this.getSelectedProducts();
+  }
 
   emitSelectedProduct(products: Product[]){
     this.selecteitemSubject.next(products)
@@ -20,7 +22,7 @@ export class CartService {
     this.selectitems.pipe(take(1), map(products=>{
       products.push(product);
       let prodarr = JSON.stringify(products);
-      localStorage.setItem('products', prodarr)
+      localStorage.setItem("products", prodarr);
 
     })).subscribe()
   }
