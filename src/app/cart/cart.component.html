@@ -4,27 +4,24 @@
             <div class="row" *ngFor="let item of orderDetailsSubject.products; let i=index">
                 <div class="card">
                     <div class="col-lg-3">
-                        <img src={{item.image}}} class="card-img-top" alt="...">
+                        <img src={{item.image}} class="card-img-top" alt="...">
                     </div>
                     <div class="col-lg-6">
                         <h5 class="card-title">{{item.title}}</h5>
-                        <p class="card-text" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{item.description}}</p>
-                        <h4>Price: <span> {{item.price}}</span></h4>
-                        <h4>Discount: <span> 10</span></h4>
-                        <h4>Price: <span> {{orderDetailsSubject.finalPrice}}</span></h4>
+                        <p class="card-text" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+                            {{item.description}}</p>
+                        <h4>{{item.price}}</h4>
                     </div>
+
+                   
                 </div>
 
 
             </div>
 
         </div>
-        <div class="col-lg-3 card card-body">
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempora nemo, voluptate, atque culpa
-            reiciendis fugiat, ea veritatis ullam excepturi ipsam. Repellendus autem tempore enim tenetur laudantium
-            placeat. Cupiditate, non?
-        </div>
-
+        
     </div>
 </div>
+
